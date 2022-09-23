@@ -109,6 +109,8 @@ app.all("*", (req, res, next) => {
     next(new AppError(`can't find ${req.originalUrl} on this server`, 400));
 });
 
+// Start express app
+
 app.use (errorControllerHandler);
 
 module.exports = app;
